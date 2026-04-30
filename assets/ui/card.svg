@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 140" fill="currentColor">
+  <!-- Outer border shadow / glow -->
+  <rect x="2" y="2" width="96" height="136" rx="12" ry="12" fill="currentColor" opacity="0.1"/>
+  <!-- Main card body -->
+  <rect x="4" y="4" width="92" height="132" rx="10" ry="10" fill="currentColor" opacity="0.2"/>
+  <!-- Inner card border -->
+  <rect x="8" y="8" width="84" height="124" rx="6" ry="6" fill="currentColor" opacity="0.4"/>
+  
+  <!-- Central rotated ellipse background (dark) -->
+  <g transform="translate(50, 70) rotate(-30)">
+    <ellipse cx="0" cy="0" rx="35" ry="22" fill="black" opacity="0.3"/>
+    <!-- Central lighter ellipse -->
+    <ellipse cx="0" cy="0" rx="30" ry="18" fill="white" opacity="0.2"/>
+  </g>
+  
+  <!-- Corner pips placeholders (top left, bottom right) -->
+  <circle cx="16" cy="16" r="4" fill="currentColor" opacity="0.5"/>
+  <circle cx="84" cy="124" r="4" fill="currentColor" opacity="0.5"/>
+</svg>
