@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <title>Minus One</title>
+    <link rel="preload" href="./assets/font/nunito.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="preload" href="./assets/font/pixel-font.ttf" as="font" type="font/ttf" crossorigin />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="bg" aria-hidden="true"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <header class="topbar glass">
+      <div class="brand">
+        <img class="brand-logo" src="./assets/banner.png" alt="Minus One" />
+      </div>
+      <nav class="nav">
+        <a href="#trailer">Trailer</a>
+        <a href="#how">How to Play</a>
+        <a href="#cards">Cards</a>
+        <a href="#shop">Shop</a>
+        <a href="#tips">Tips</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero glass">
+        <div class="hero-left">
+          <h1>Battle Royale UNO</h1>
+          <p class="lead">
+            Bust enemies to <strong>-1 HP</strong>. Control the table. Rig your deck between rounds.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Fast matches</span>
+            <span class="pill">Power cards</span>
+            <span class="pill">Augments</span>
+            <span class="pill">Deck rigging</span>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="stat-grid">
+            <div class="stat">
+              <div class="stat-k">Win condition</div>
+              <div class="stat-v">Last player standing</div>
+            </div>
+            <div class="stat">
+              <div class="stat-k">Eliminate</div>
+              <div class="stat-v">Enemy reaches -1 HP</div>
+            </div>
+            <div class="stat">
+              <div class="stat-k">Between rounds</div>
+              <div class="stat-v">Shop + Deck Fix</div>
+            </div>
+            <div class="stat">
+              <div class="stat-k">Spice</div>
+              <div class="stat-v">Power cards + Specials</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="trailer" class="section glass">
+        <div class="section-head">
+          <div class="section-title">
+            <img class="icon" src="./assets/ui/card.svg" alt="" />
+            <h2>Teaser trailer</h2>
+          </div>
+          <div class="section-sub">Embedded from YouTube.</div>
+        </div>
+        <div class="video-wrap">
+          <div
+            class="yt"
+            data-video-id="Qi53xtgW0wo"
+            data-title="Minus One teaser trailer"
+            role="group"
+            aria-label="Trailer video player"
+          >
+            <button class="yt-btn" type="button" aria-label="Play trailer">
+              <span class="yt-play" aria-hidden="true"></span>
+              <span class="yt-text">Play trailer</span>
+            </button>
+            <a class="yt-fallback" href="https://youtu.be/Qi53xtgW0wo" target="_blank" rel="noreferrer">
+              Open on YouTube
+            </a>
+            <noscript>
+              <a href="https://youtu.be/Qi53xtgW0wo" target="_blank" rel="noreferrer">Open trailer on YouTube</a>
+            </noscript>
+          </div>
+        </div>
+      </section>
+
+      <section id="how" class="section glass">
+        <div class="section-head">
+          <div class="section-title">
+            <img class="icon" src="./assets/ui/settings.svg" alt="" />
+            <h2>How to play</h2>
+          </div>
+          <div class="section-sub">Everything you need to know.</div>
+        </div>
+
+        <div class="cols">
+          <div class="card">
+            <h3>Goal</h3>
+            <p>
+              Reduce opponents to <strong>-1 HP</strong> to eliminate them. Survive until you’re the last player standing.
+            </p>
+          </div>
+          <div class="card">
+            <h3>On your turn</h3>
+            <ol>
+              <li><strong>Play</strong> a legal card (match color or number, or play a special).</li>
+              <li>If you can’t play, you must <strong>draw</strong> until you can (depending on lobby rules).</li>
+              <li>Special cards change turn order and pacing.</li>
+            </ol>
+          </div>
+          <div class="card">
+            <h3>Damage & gold</h3>
+            <p>
+              Number cards deal damage (and generate gold). Gold fuels <strong>Power cards</strong> and the <strong>Shop</strong>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="cards" class="section glass">
+        <div class="section-head">
+          <div class="section-title">
+            <img class="icon" src="./assets/ui/card.svg" alt="" />
+            <h2>Card types</h2>
+          </div>
+          <div class="section-sub">Play smart, break tempo.</div>
+        </div>
+
+        <div class="cols">
+          <div class="card">
+            <h3>Number cards</h3>
+            <ul>
+              <li><strong>Legal play</strong>: match color or match number.</li>
+              <li><strong>Damage</strong>: based on value (plus augment bonuses).</li>
+              <li><strong>Gold</strong>: earn gold when you play.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Special cards</h3>
+            <ul>
+              <li><strong>Skip</strong>: deny the next turn.</li>
+              <li><strong>Reverse</strong>: flip the direction of play.</li>
+              <li><strong>Wild</strong>: always playable, choose the next color.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Power cards</h3>
+            <ul>
+              <li>Purchased/drawn with gold.</li>
+              <li>Examples: <strong>Shield</strong>, <strong>Heals</strong>, <strong>Double Damage</strong>, <strong>Steal gold</strong>.</li>
+              <li>Some are <strong>negative</strong> and trigger immediately on draw.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="shop" class="section glass">
+        <div class="section-head">
+          <div class="section-title">
+            <img class="icon" src="./assets/ui/shopping_cart.svg" alt="" />
+            <h2>Between rounds: Shop + Deck rigging</h2>
+          </div>
+          <div class="section-sub">This is where runs are made.</div>
+        </div>
+
+        <div class="cols">
+          <div class="card">
+            <h3>Augments</h3>
+            <p>
+              Buy upgrades that permanently boost your run: damage bonuses, survivability, economy, power-card capacity, and more.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Deck fixes</h3>
+            <p>
+              Rig your deck: inject colors, remove junk, and shape your odds. Small changes add up over multiple rounds.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Timer</h3>
+            <p>
+              Shop time is limited (and configurable in lobbies). Decide fast: stabilize, scale, or gamble on a swing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="tips" class="section glass">
+        <div class="section-head">
+          <div class="section-title">
+            <h2>Advanced tips</h2>
+          </div>
+          <div class="section-sub">Win more fights.</div>
+        </div>
+
+        <div class="cols">
+          <div class="card">
+            <h3>Play to the next seat</h3>
+            <p>
+              You always hit the next player in the current direction. Use <strong>Reverse</strong> to change who you’re pressuring.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Protect your tempo</h3>
+            <p>
+              Skips and Wilds are tempo tools. Hold them to deny lethal turns or set up a safe power-card window.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Spend gold with intent</h3>
+            <p>
+              Gold can be damage, safety, or scaling. Don’t buy everything—buy the thing that wins the next two turns.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="footer-inner glass">
+          <div class="footer-left">
+            <div class="footer-title">Minus One</div>
+            <div class="footer-sub">Battle Royale UNO · Coming 2026</div>
+          </div>
+          <div class="footer-right">
+            <a href="#trailer">Back to trailer</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
